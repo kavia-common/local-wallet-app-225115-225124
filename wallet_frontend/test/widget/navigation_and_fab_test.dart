@@ -5,7 +5,7 @@ import 'package:wallet_frontend/app.dart';
 import 'package:wallet_frontend/providers/wallet_provider.dart';
 
 void main() {
-  Widget _wrap() {
+  Widget wrapApp() {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => WalletProvider()),
@@ -15,7 +15,7 @@ void main() {
   }
 
   testWidgets('Bottom navigation switches tabs', (tester) async {
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(wrapApp());
     await tester.pumpAndSettle();
 
     expect(find.text('Recent Transactions'), findsOneWidget);
