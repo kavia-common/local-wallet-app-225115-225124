@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/kavia/workspace/code-generation/local-wallet-app-225115-225124/wallet_frontend
+flutter analyze
+
